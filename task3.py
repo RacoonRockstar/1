@@ -1,18 +1,19 @@
 import os
-path1 = "/tmp/MyProject"
-path2 = "/tmp/MyProject/css"
-path3 = "/tmp/MyProject/js"
-name = "/tmp/MyProject/css/style.css"
-name2 = "/tmp/MyProject/js/app.js"
-name3 = "/tmp/MyProject/index.html"
+
+projectpath = "/tmp/MyProject"
+pathcss = "/tmp/MyProject/css"
+pathjs = "/tmp/MyProject/js"
+namecss = "/tmp/MyProject/css/style.css"
+namejs = "/tmp/MyProject/js/app.js"
+namehtml = "/tmp/MyProject/index.html"
 try:
-    os.makedirs(path1)
-    os.makedirs(path2)
-    os.makedirs(path3)
-    open(name, "w")
-    open(name2, "w")
-    open(name3, "w")
-    my_file = open(name, "w")
+    os.makedirs(projectpath)
+    os.makedirs(pathcss)
+    os.makedirs(pathjs)
+    open(namecss, "w")
+    open(namejs, "w")
+    open(namehtml, "w")
+    my_file = open(namecss, "w")
     my_file.write("/* this source generate automatically */ \n"
                   "html {\n"
                   "}\n"
@@ -25,11 +26,11 @@ try:
 
     my_file.close()
 
-    my_file2 = open(name2, "w")
+    my_file2 = open(namejs, "w")
     my_file2.write("/* this source generate automatically */")
     my_file2.close()
 
-    my_file3 = open(name3, "w")
+    my_file3 = open(namehtml, "w")
     my_file3.write("<!DOCTYPE html>\n"
                    "<html lang=""eng"">\n"
                    "<head>\n"
@@ -46,6 +47,6 @@ try:
                    "</html>\n")
     my_file3.close()
 except OSError:
-    print ("Создать директорию %s не удалось" % path1)
+    print("Создать директорию %s не удалось" % projectpath)
 else:
-    print ("Успешно создана директория %s" % path1)
+    print("Успешно создана директория %s" % projectpath)
